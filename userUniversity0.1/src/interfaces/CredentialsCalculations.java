@@ -1,6 +1,6 @@
 package interfaces;
 
-public interface Credentials {
+public interface CredentialsCalculations {
 	
 	public void managmentCredentials();
 

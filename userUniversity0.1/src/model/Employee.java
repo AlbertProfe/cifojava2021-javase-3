@@ -2,10 +2,10 @@ package model;
 
 import java.util.ArrayList;
 
-import interfaces.Holidays;
+import interfaces.HolidaysCalculations;
 import interfaces.SalariesCalculations;
 
-public class Employee extends User implements SalariesCalculations, Holidays {
+public class Employee extends Member implements SalariesCalculations, HolidaysCalculations {
 
 	public double salary;
 	public ArrayList<Expense> expenses;

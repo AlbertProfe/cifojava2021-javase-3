@@ -3,13 +3,14 @@ package model;
 import java.util.Date;
 import java.util.HashMap;
 
-import interfaces.Holidays;
+import interfaces.HolidaysCalculations;
 
-public class Student extends User implements Holidays {
+public class Student extends Member implements HolidaysCalculations {
 
 	public HashMap<String, Double> marks;
 	public boolean active;
 	public Date inscriptionDate;
+	
 
 	public Student() {
 		

@@ -1,64 +1,50 @@
 package model;
 
-import java.util.ArrayList;
+public class User {
 
-import interfaces.Credentials;
-
-public class User extends Member implements Credentials {
-
-	public String userName;
-	public String password;
-	public boolean isValidated = false;
-	public boolean isBlocked = false;
+	public String name;
+	public String surname;
+	public int age;
+	public String email;
 
 	public User() {
-
 	}
 
-	
-
-	public String getUserName() {
-		return userName;
+	public String getName() {
+		return name;
 	}
 
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public String getPassword() {
-		return password;
+	public String getSurname() {
+		return surname;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
+	public void setSurname(String surname) {
+		this.surname = surname;
 	}
 
-	public boolean isValidated() {
-		return isValidated;
+	public int getAge() {
+		return age;
 	}
 
-	public void setValidated(boolean isValidated) {
-		this.isValidated = isValidated;
+	public void setAge(int age) {
+		this.age = age;
 	}
 
-	public boolean isBlocked() {
-		return isBlocked;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setBlocked(boolean isBlocked) {
-		this.isBlocked = isBlocked;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	@Override
 	public String toString() {
-		return "User [userName=" + userName + ", password=" + password + ", isValidated=" + isValidated + ", isBlocked="
-				+ isBlocked + "]";
-	}
-
-	@Override
-	public void managmentCredentials() {
-		// TODO Auto-generated method stub
-
+		return "Member [name=" + name + ", surname=" + surname + ", age=" + age + ", email=" + email + "]";
 	}
 
 }

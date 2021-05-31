@@ -1,6 +1,6 @@
 package interfaces;
 
-public interface Holidays {
+public interface HolidaysCalculations {
 
 	public void calcultateHolidays();
 }

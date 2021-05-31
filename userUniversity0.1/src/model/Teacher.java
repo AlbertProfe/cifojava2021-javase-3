@@ -1,8 +1,8 @@
 package model;
 
-import interfaces.Holidays;
+import interfaces.HolidaysCalculations;
 
-public class Teacher extends Employee implements Holidays {
+public class Teacher extends Employee implements HolidaysCalculations {
 	
 	public double extraSalaryPerCourse;
 
