@@ -23,7 +23,7 @@ public class Teacher extends Employee implements HolidaysCalculations {
 	public String toString() {
 		
 			
-		return super.toString()	 + "\nTeacher [extraSalaryPerCourse=" + extraSalaryPerCourse + "]";
+		return  "\nTeacher [extraSalaryPerCourse=" + extraSalaryPerCourse + "]" + super.toString();
 	}
 	
 	

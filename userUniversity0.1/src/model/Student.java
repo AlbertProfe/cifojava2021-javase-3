@@ -44,7 +44,7 @@ public class Student extends Member implements HolidaysCalculations {
 	@Override
 	public String toString() {
 	
-		return "Student [marks=" + marks + ", active=" + active + ", inscriptionDate=" + inscriptionDate +  "]";
+		return super.toString() + "\nStudent [marks=" + marks + ", active=" + active + ", inscriptionDate=" + inscriptionDate +  "]";
 	}
 
 	@Override

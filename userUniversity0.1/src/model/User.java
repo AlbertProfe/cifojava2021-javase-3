@@ -7,9 +7,8 @@ public class User {
 	public int age;
 	public String email;
 
-	public User() {
-	}
-
+	public User() {	}
+	
 	public String getName() {
 		return name;
 	}
@@ -44,7 +43,10 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "Member [name=" + name + ", surname=" + surname + ", age=" + age + ", email=" + email + "]";
+		
+		return "\nUser [name=" + name + ", surname=" + surname + ", age=" + age + ", email=" + email + "]";
 	}
+
+	
 
 }

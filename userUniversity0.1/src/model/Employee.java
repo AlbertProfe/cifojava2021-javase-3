@@ -24,8 +24,8 @@ public class Employee extends Member implements SalariesCalculations, HolidaysCa
 
 	@Override
 	public String toString() {
-
-		return super.toString() + "\nEmployee [salary=" + salary + "]";
+		//System.out.println(super.toString());
+		return  "\nEmployee [salary=" + salary + "]" + super.toString();
 	}
 
 	@Override

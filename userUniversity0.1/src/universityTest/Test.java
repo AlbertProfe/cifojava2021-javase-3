@@ -1,8 +1,8 @@
 package universityTest;
 
-import java.util.Collections;
 
 import model.Employee;
+import model.Member;
 import model.Student;
 import model.Teacher;
 import model.User;
@@ -31,26 +31,72 @@ public class Test {
 	
 	//this is Joan, who ask for some information about Maths courses
 	User joan = new User();
+	joan.setAge(25);
+	joan.setEmail("@joan");
+	joan.setName("Joan");
+	joan.setSurname("Gasol");
+	
+	System.out.println(joan);
 	
 	//this is Alexa, a mother who visits her doughter in xmas
-	User alexa = new User();
+	Member alexa = new Member();
+	alexa.setAge(26);
+	alexa.setEmail("@alexa");
+	alexa.setName("Alexa");
+	alexa.setSurname("Kazan");
+	alexa.setId(101);
 	
+	System.out.println(alexa);
 	
+
 	//this is Sergii, an empoloyee of the university: he handles all the web
 	//and the db and spring java systems
-	User sergii = new Employee();
+	Employee sergii = new Employee();
+	sergii.setAge(24);
+	sergii.setEmail("@sergeii");
+	sergii.setId(102);
+	sergii.setSurname("Karmazov");
+	sergii.setName("Sergii");
+	
+	sergii.setSalary(2500.00);
+	
+	System.out.println(sergii);
 	
 	//this is pepe, and employee of the university, manages the fiber optics
 	//network and systems
 	User pepe = new Employee();
 	
+	
+	
+	
 	//just three students in my campus of Maths
-	User isa = new Student();
+	Student isa = new Student();
+	isa.setAge(21);
+	isa.setEmail("@isa");
+	isa.setId(104);
+	isa.setSurname("Debovais");
+	isa.setName("Isabel");
+	
+	isa.setActive(true);
+	
+	System.out.println(isa);
+	
 	User borja = new Student();
-	User dimitry = new Student();
+	
 	
 	//just a couple of teachers
-	User artur = new Teacher();
+	Teacher artur = new Teacher();
+	artur.setAge(18);
+	artur.setEmail("@artur");
+	artur.setId(103);
+	artur.setSurname("Karmazov");
+	artur.setName("Artur");
+	artur.setSalary(5000);
+	
+	artur.setExtraSalaryPerCourse(250);
+	
+	System.out.println(artur);
+	
 	User kingsley = new Teacher();
 	
 	upc_Math_DB.getUniversityUsersDB().add(kingsley);
