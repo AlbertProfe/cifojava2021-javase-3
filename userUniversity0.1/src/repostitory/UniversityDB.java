@@ -35,21 +35,17 @@ public class UniversityDB {
 		return DBsTotal;
 	}
 
-
 	public static void setDBsTotal(int dBsTotal) {
 		DBsTotal = dBsTotal;
 	}
 
-
 	public int getUsersQty() {
 		return usersQty;
 	}
-
-
+	
 	public void setUsersQty(int usersQty) {
 		this.usersQty = usersQty;
 	}
-
 
 	public static String getDefinition() {
 		return definition;
@@ -62,29 +58,40 @@ public class UniversityDB {
 	public  String getNameUniversity() {
 		return nameUniversity;
 	}
+	
 	public void setNameUniversity(String nameUniversity) {
 		this.nameUniversity = nameUniversity;
 	}
+	
 	public String getLocation() {
 		return location;
 	}
+	
 	public void setLocation(String location) {
 		this.location = location;
 	}
+	
 	public int getSize() {
 		return size;
 	}
+	
 	public void setSize(int size) {
 		this.size = size;
 	}
+	
 	public List<User> getUniversityUsersDB() {
 		return users;
 	}
+	
 	public void setUniversityUsersDB(List<User> universityUsersDB) {
 		this.users = universityUsersDB;
 	}
-	
-	
-	
+
+
+	@Override
+	public String toString() {
+		return "UniversityDB [nameUniversity=" + nameUniversity + ", location=" + location
+				+ ", size=" + size + "\nusers=" + users + "]";
+	}
 
 }

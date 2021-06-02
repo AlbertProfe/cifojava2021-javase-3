@@ -1,19 +1,38 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import interfaces.CredentialsCalculations;
 import interfaces.HolidaysCalculations;
 
 public class Member extends User implements CredentialsCalculations, HolidaysCalculations {
-	
+
 	private int id;
-	
+
 	private List<Holidays> holidays;
 	private Credentials credentials;
-	
-	public Member() {super();}
-	
+
+	public Member() {
+		super();
+	}
+
+	public Member(String name, String surname, int age, String email, int id) {
+
+		super(name, surname, age, email);
+
+		this.id = id;
+		this.holidays = new ArrayList<Holidays>();
+
+	}
+
+	public Member( int id) {
+
+		this.id = id;
+		this.holidays = new ArrayList<Holidays>();
+
+	}
+
 	public int getId() {
 		return id;
 	}
@@ -30,7 +49,6 @@ public class Member extends User implements CredentialsCalculations, HolidaysCal
 		this.holidays = holidays;
 	}
 
-
 	public Credentials getCredentials() {
 		return credentials;
 	}
@@ -39,28 +57,24 @@ public class Member extends User implements CredentialsCalculations, HolidaysCal
 		this.credentials = credentials;
 	}
 
-
 	@Override
 	public void managmentCredentials() {
 		// TODO Auto-generated method stub
-		
-	}
 
+	}
 
 	@Override
 	public void calcultateHolidays() {
 		// TODO Auto-generated method stub
-		
-	}
 
+	}
 
 	@Override
 	public String toString() {
-		
-		//System.out.println(super.toString());
-		return  "\nMember [id=" + id + ", holidays=" + holidays + ", credentials=" + credentials + "]" + super.toString();
+
+		// System.out.println(super.toString());
+		return "\nMember [id=" + id + ", holidays=" + holidays + ", credentials=" + credentials + "]"
+				+ super.toString();
 	}
-	
-	
 
 }

@@ -9,6 +9,16 @@ public class User {
 
 	public User() {	}
 	
+	
+	public User(String name, String surname, int age, String email) {
+		super();
+		this.name = name;
+		this.surname = surname;
+		this.age = age;
+		this.email = email;
+	}
+
+
 	public String getName() {
 		return name;
 	}

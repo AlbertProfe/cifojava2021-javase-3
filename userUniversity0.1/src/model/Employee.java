@@ -14,6 +14,17 @@ public class Employee extends Member implements SalariesCalculations, HolidaysCa
 
 	}
 
+	public Employee(String name, String surname, int age, String email,
+					int id,
+					double salary) {
+		
+		super( name, surname , age, email, id  );
+		
+		this.salary = salary;
+		this.expenses = new ArrayList<Expense>();
+	}
+
+
 	public double getSalary() {
 		return salary;
 	}
