@@ -30,6 +30,17 @@ public class UniversityDB {
 		this.users = new ArrayList<User>();
 	}
 	
+	public void printUsers () {
+		
+		int count = 1;
+		for (   User user        :  this.users   ) {
+			System.out.println("#" + count + "Name: " + user.getName());
+			count++;
+			System.out.println(user);
+			System.out.println("-");
+		}
+		
+	}
 	
 	public static int getDBsTotal() {
 		return DBsTotal;

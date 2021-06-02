@@ -11,8 +11,10 @@ public class Test {
 
 	public static void main(String[] args) {
 
-		testObjects();
-		//testUsers();
+		//testObjects();
+		testUsers();
+		
+		System.out.println(" finishing ....");
 
 	}
 
@@ -209,7 +211,11 @@ public class Test {
 
 		System.out.println("\nFacultat de Matemàtiques i Estadística (FME)");
 		System.out.println("----------------------------------------------");
-		System.out.println(upc_Math_DB);
+		//System.out.println(upc_Math_DB);
+		
+		
+		upc_Math_DB.printUsers();
+		
 
 		// we can't access to this field cause is PRIVATE so well done!!
 		// upc_Math_DB.universityUsersDB.add(pepe);

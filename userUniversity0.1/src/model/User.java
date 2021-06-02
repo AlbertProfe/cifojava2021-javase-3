@@ -51,11 +51,12 @@ public class User {
 		this.email = email;
 	}
 
-	@Override
-	public String toString() {
-		
-		return "\nUser [name=" + name + ", surname=" + surname + ", age=" + age + ", email=" + email + "]";
-	}
+	
+	  @Override public String toString() {
+	  
+	  return "\nUser [name=" + name + ", surname=" + surname + ", age=" + age +
+	  ", email=" + email + "]"; }
+	 
 
 	
 
