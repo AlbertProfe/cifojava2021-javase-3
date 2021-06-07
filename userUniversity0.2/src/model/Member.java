@@ -79,16 +79,4 @@ public class Member extends User implements CredentialsCalculations, HolidaysCal
 
 	
 
-	@Override
-	public void calculateYearlySalary(int year) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public double calculateTaxes(int year) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
 }

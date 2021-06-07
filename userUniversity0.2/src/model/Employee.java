@@ -27,7 +27,8 @@ public class Employee extends Member implements SalariesCalculations, HolidaysCa
 
 	public HashMap<Integer, Double> getSalaryPerYear() {
 
-		this.calculateYearlySalary();
+		//to do for each calculate each year
+		//this.calculateYearlySalary();
 		return salaryPerYear;
 	}
 
@@ -111,16 +112,6 @@ public class Employee extends Member implements SalariesCalculations, HolidaysCa
 		return "\nEmployee [salary=" + monthSalary + "]" + super.toString();
 	}
 
-	@Override
-	public void calculateTaxes() {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void calculateYearlySalary() {
-		// TODO Auto-generated method stub
-
-	}
+	
 
 }
