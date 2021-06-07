@@ -7,9 +7,9 @@ public class User {
 	public int age;
 	public String email;
 
-	public User() {	}
-	
-	
+	public User() {
+	}
+
 	public User(String name, String surname, int age, String email) {
 		super();
 		this.name = name;
@@ -17,7 +17,6 @@ public class User {
 		this.age = age;
 		this.email = email;
 	}
-
 
 	public String getName() {
 		return name;
@@ -51,13 +50,10 @@ public class User {
 		this.email = email;
 	}
 
-	
-	  @Override public String toString() {
-	  
-	  return "\nUser [name=" + name + ", surname=" + surname + ", age=" + age +
-	  ", email=" + email + "]"; }
-	 
+	@Override
+	public String toString() {
 
-	
+		return "\nUser [name=" + name + ", surname=" + surname + ", age=" + age + ", email=" + email + "]";
+	}
 
 }

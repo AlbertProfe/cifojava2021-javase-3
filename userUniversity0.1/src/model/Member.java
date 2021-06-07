@@ -26,7 +26,7 @@ public class Member extends User implements CredentialsCalculations, HolidaysCal
 
 	}
 
-	public Member( int id) {
+	public Member(int id) {
 
 		this.id = id;
 		this.holidays = new ArrayList<Holidays>();

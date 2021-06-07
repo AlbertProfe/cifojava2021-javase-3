@@ -7,40 +7,40 @@ import interfaces.SalariesCalculations;
 
 public class Employee extends Member implements SalariesCalculations, HolidaysCalculations {
 
-	public double salary;
+	public double monthlySalary;
 	public ArrayList<Expense> expenses;
+	
+	
 
 	public Employee() {
 
 	}
 
-	public Employee(String name, String surname, int age, String email,
-					int id,
-					double salary) {
-		
-		super( name, surname , age, email, id  );
-		
-		this.salary = salary;
+	public Employee(String name, String surname, int age, String email, int id, double salary) {
+
+		super(name, surname, age, email, id);
+
+		this.monthlySalary = salary;
 		this.expenses = new ArrayList<Expense>();
 	}
 
-
 	public double getSalary() {
-		return salary;
+		return monthlySalary;
 	}
 
 	public void setSalary(double salary) {
-		this.salary = salary;
+		this.monthlySalary = salary;
 	}
+
 
 	@Override
 	public String toString() {
-		//System.out.println(super.toString());
-		return  "\nEmployee [salary=" + salary + "]" + super.toString();
+		// System.out.println(super.toString());
+		return "\nEmployee [salary=" + monthlySalary + "]" + super.toString();
 	}
 
 	@Override
-	public void calculateSalary() {
+	public void calculateYearlySalary() {
 		// TODO Auto-generated method stub
 
 	}

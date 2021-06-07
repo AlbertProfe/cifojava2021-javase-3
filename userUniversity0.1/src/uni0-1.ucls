@@ -93,7 +93,7 @@
   </interface>  
   <interface id="11" language="java" name="interfaces.HolidaysCalculations" project="userUniversity0.1" 
     file="/userUniversity0.1/src/interfaces/HolidaysCalculations.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="911" y="-183"/>    
+    <position height="-1" width="-1" x="915" y="-187"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -114,90 +114,90 @@
     <end type="SOURCE" refId="7"/>    
     <end type="TARGET" refId="11"/>  
   </realization>  
-  <realization id="14">    
-    <bendpoint x="562" y="494"/>    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="12"/>  
-  </realization>  
-  <generalization id="15">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="7"/>  
-  </generalization>  
-  <association id="16">    
-    <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="17" name="users">        
-        <position height="0" width="0" x="27" y="-46"/>      
-      </attribute>      
-      <multiplicity id="18" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="27" y="-46"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="1" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="19">    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="1"/>  
-  </generalization>  
-  <realization id="20">    
-    <bendpoint x="922" y="1148"/>    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="11"/>  
-  </realization>  
-  <generalization id="21">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="4"/>  
-  </generalization>  
-  <association id="22">    
+  <association id="14">    
     <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="23" name="holidays">        
-        <position height="0" width="0" x="433" y="-185"/>      
-      </attribute>      
-      <multiplicity id="24" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="433" y="-185"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="5" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="25">    
-    <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="4"/>  
-  </generalization>  
-  <association id="26">    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="27" name="credentials">        
+      <attribute id="15" name="credentials">        
         <position height="0" width="0" x="380" y="310"/>      
       </attribute>      
-      <multiplicity id="28" minimum="0" maximum="1">        
+      <multiplicity id="16" minimum="0" maximum="1">        
         <position height="0" width="0" x="380" y="310"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="29">    
+  <association id="17">    
     <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="30" name="expenses">        
+      <attribute id="18" name="expenses">        
         <position height="0" width="0" x="256" y="180"/>      
       </attribute>      
-      <multiplicity id="31" minimum="0" maximum="2147483647">        
+      <multiplicity id="19" minimum="0" maximum="2147483647">        
         <position height="0" width="0" x="256" y="180"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="8" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="32">    
-    <bendpoint x="444" y="734"/>    
-    <bendpoint x="842" y="730"/>    
-    <end type="SOURCE" refId="3"/>    
+  <association id="20">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="21" name="users">        
+        <position height="0" width="0" x="27" y="-46"/>      
+      </attribute>      
+      <multiplicity id="22" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="27" y="-46"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="23">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="4"/>  
+  </generalization>  
+  <generalization id="24">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <realization id="25">    
+    <bendpoint x="922" y="1148"/>    
+    <end type="SOURCE" refId="6"/>    
     <end type="TARGET" refId="11"/>  
   </realization>  
-  <realization id="33">    
+  <realization id="26">    
+    <bendpoint x="562" y="494"/>    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="12"/>  
+  </realization>  
+  <generalization id="27">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="4"/>  
+  </generalization>  
+  <realization id="28">    
     <bendpoint x="736" y="840"/>    
     <end type="SOURCE" refId="7"/>    
     <end type="TARGET" refId="10"/>  
+  </realization>  
+  <association id="29">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="30" name="holidays">        
+        <position height="0" width="0" x="433" y="-185"/>      
+      </attribute>      
+      <multiplicity id="31" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="433" y="-185"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="32">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="7"/>  
+  </generalization>  
+  <realization id="33">    
+    <bendpoint x="444" y="696"/>    
+    <bendpoint x="846" y="696"/>    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="11"/>  
   </realization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    

@@ -11,16 +11,14 @@ public class Test {
 
 	public static void main(String[] args) {
 
-		//testObjects();
+		// testObjects();
 		testUsers();
-		
+
 		System.out.println(" finishing ....");
 
 	}
 
 	public static void testObjects() {
-
-	
 
 		// this is Joan, who ask for some information about Maths courses
 		User joan = new User();
@@ -65,9 +63,9 @@ public class Test {
 		User pepeClone = new Employee("Pepe", "Ropsten", 25, "@pepe", 105, 50000);
 
 		System.out.println("\nLet's see if pepeClone in execution time prints (with toString) the toString"
-				+ "\nof Employee (cause NEW is Employye) or User (cause TAG is User)"
+				+ "\nof Employee (cause NEW is Employee) or User (cause TAG is User)"
 				+ "\nconsidering that TAG is User (so in compilation time it will execute JUST its methods)"
-				+ "\nwill not have access to subclasses methods and fiels.");
+				+ "\nwill not have access to subclasses methods and fields.");
 		System.out.println(pepeClone);
 
 		User pepeMember = new Member(106);
@@ -101,9 +99,8 @@ public class Test {
 
 		User kingsley = new Teacher();
 
-
 	}
-	
+
 	public static void testUsers() {
 
 		UniversityDB upc_Math_DB = new UniversityDB();
@@ -162,10 +159,11 @@ public class Test {
 
 		User pepeClone = new Employee("Pepe", "Ropsten", 25, "@pepe", 105, 50000);
 
-		System.out.println("\nLet's see if pepeClone in execution time prints (with toString) the toString"
-				+ "\nof Employee (cause NEW is Employye) or User (cause TAG is User)"
+		System.out.println("\nLet's see if pepeClone in execution time prints (with toString)"
+				+ "\nthe toString of Employee (cause NEW is Employye) or User (cause TAG is User),"
 				+ "\nconsidering that TAG is User (so in compilation time it will execute JUST its methods)"
-				+ "\nwill not have access to subclasses methods and fiels.");
+				+ "\nwill not have access to subclasses methods and fields."
+				+ "So \"System.out.println(pepeClone);\" will execute Employee's toString.");
 		System.out.println(pepeClone);
 
 		User pepeMember = new Member(106);
@@ -211,11 +209,9 @@ public class Test {
 
 		System.out.println("\nFacultat de Matemàtiques i Estadística (FME)");
 		System.out.println("----------------------------------------------");
-		//System.out.println(upc_Math_DB);
-		
-		
+		// System.out.println(upc_Math_DB);
+
 		upc_Math_DB.printUsers();
-		
 
 		// we can't access to this field cause is PRIVATE so well done!!
 		// upc_Math_DB.universityUsersDB.add(pepe);
