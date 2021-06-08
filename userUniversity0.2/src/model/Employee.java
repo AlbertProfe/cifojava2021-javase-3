@@ -2,6 +2,7 @@ package model;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import interfaces.HolidaysCalculations;
 import interfaces.SalariesCalculations;
@@ -10,12 +11,11 @@ public class Employee extends Member implements SalariesCalculations, HolidaysCa
 
 	public double monthSalary;
 	public ArrayList<Expense> expenses;
-
+	public List<Holidays> holidaysList;
 	public HashMap<Integer, Double> salaryPerYear;
+	
 
-	public Employee() {
-
-	}
+	public Employee() {	}
 
 	public Employee(String name, String surname, int age, String email, int id, double salary) {
 
@@ -50,11 +50,20 @@ public class Employee extends Member implements SalariesCalculations, HolidaysCa
 		this.monthSalary = salary;
 	}
 
+	@Override
+	public void calculateYearlySalary(int year) {
+
+		double yearSalary = this.calculateTaxes(year) + this.calculateExpensesPerYear(year);
+		
+
+		this.salaryPerYear.put(year, yearSalary);
+	}
+	
 	public double calculateExpensesPerYear(int year) {
 
 		double totalExpensesPerYear = 0.0;
 		for (Expense expense : expenses) {
-
+			//https://stackoverflow.com/questions/9243578/java-util-date-and-getyear
 			if ((expense.getValue() > 0) && (expense.getDate().getYear() == year)) {
 
 				totalExpensesPerYear = totalExpensesPerYear + (expense.getValue());
@@ -66,16 +75,9 @@ public class Employee extends Member implements SalariesCalculations, HolidaysCa
 	}
 
 	@Override
-	public void calculateYearlySalary(int year) {
-
-		double yearSalary = this.calculateTaxes(year) + this.calculateExpensesPerYear(year);
-
-		this.salaryPerYear.put(year, yearSalary);
-	}
-
-	@Override
-	public double calculateTaxes(int year) { // impostos a pagar.
-
+	public double calculateTaxes(int year) { 
+		
+		// impostos a pagar.
 		// int year = Expense.getDate().getYear();
 		double taxe1 = 2.0; // public double section1 = minimum;
 		double taxe2 = 4.0;

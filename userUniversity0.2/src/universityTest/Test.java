@@ -231,8 +231,12 @@ public class Test {
 		artur.setName("Artur");
 		artur.setSalary(5000);
 		
-
 		artur.getSalaryPerYear().get(2021);
+		
+		Student pepe = new Student();
+		Teacher king = new Teacher();
+		
+		
 		
 	}
 
