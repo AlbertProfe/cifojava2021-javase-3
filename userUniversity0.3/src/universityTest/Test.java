@@ -238,9 +238,9 @@ public class Test {
 		artur.setName("Artur");
 		artur.setMonthSalary(5000);
 		
-		//SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+		SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 	    Date todayDate = new Date();
-	    //System.out.println(dateFormat.format(todayDate));
+	    System.out.println(dateFormat.format(todayDate));
 	   		
 
 		artur.getExpenses().add(new Expense("party1",30.0, todayDate));
