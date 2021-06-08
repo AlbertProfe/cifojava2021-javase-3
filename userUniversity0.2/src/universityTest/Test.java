@@ -243,19 +243,7 @@ public class Test {
 	    //System.out.println(dateFormat.format(todayDate));
 	   		
 
-		artur.getExpenses().add(new Expense("party1",30.0, todayDate));
-		artur.getExpenses().add(new Expense("party2",30.0, todayDate));
-		artur.getExpenses().add(new Expense("party3",30.0, todayDate));
-		artur.getExpenses().add(new Expense("party4",30.0, todayDate));
 		
-		Holidays holidays1 = new Holidays(2021);
-		holidays1.addHolidays(todayDate);
-		holidays1.addHolidays(todayDate);
-		holidays1.addHolidays(todayDate);
-		holidays1.addHolidays(todayDate);
-		
-		
-		artur.getHolidaysList().add(holidays1);
 		
 		System.out.println("\nYear Salary (from test): " + artur.getSalaryPerYear(2021).get(2021));
 		
