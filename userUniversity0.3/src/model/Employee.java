@@ -34,6 +34,8 @@ public class Employee extends Member implements SalariesCalculations, HolidaysCa
 	}
 
 	// ------------------------------------------------------------------------------------
+	// ------------------------------------------------------------------------------------
+	// ------------------------------------------------------------------------------------
 	public HashMap<Integer, Double> getSalaryPerYear() {
 
 		// to do for each calculate each year
@@ -68,6 +70,7 @@ public class Employee extends Member implements SalariesCalculations, HolidaysCa
 		return expenses;
 	}
 
+	// ------------------------------------------------------------------------------------
 	// ------------------------------------------------------------------------------------
 	@Override
 	public void calculateYearlySalary(int year) {

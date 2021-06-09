@@ -42,8 +42,6 @@ public class Employee extends Member implements SalariesCalculations, HolidaysCa
 		this.salaryPerYear = salaryPerYear;
 	}
 
-	
-
 	public double getMonthSalary() {
 		return monthSalary;
 	}
