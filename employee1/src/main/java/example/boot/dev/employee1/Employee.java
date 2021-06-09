@@ -15,12 +15,13 @@ public class Employee {
 	public int age;
 	public String email;
 	public double monthSalary;
+	public String password;
 	
 
 	public Employee() {
 		super();}
 	
-	public Employee(int id, String name, String surname, int age, String email, double monthSalary) {
+	public Employee(int id, String name, String surname, int age, String email, double monthSalary,String password) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -28,7 +29,18 @@ public class Employee {
 		this.age = age;
 		this.email = email;
 		this.monthSalary = monthSalary;
+		this.password = password;
 	}
+	
+	
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
 	public int getId() {
 		return id;
 	}
@@ -69,7 +81,7 @@ public class Employee {
 	@Override
 	public String toString() {
 		return "Employee [id=" + id + ", name=" + name + ", surname=" + surname + ", age=" + age + ", email=" + email
-				+ ", monthSalary=" + monthSalary + "]";
+				+ ", monthSalary=" + monthSalary + "]\n";
 	}
 	
 	
