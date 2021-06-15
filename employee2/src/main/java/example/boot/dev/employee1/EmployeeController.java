@@ -1,0 +1,71 @@
+package example.boot.dev.employee1;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping({"/employee", "*"})
+public class EmployeeController {
+	
+	@Autowired
+	EmployeeRepository employeeRepository;
+	
+	
+	@RequestMapping("/home")
+	public String home () {
+		
+		return "home";
+	}
+	
+	@RequestMapping("*")
+	public String notFound () {
+		
+		return "notFound";
+	}
+	
+	
+	@RequestMapping("/allEmployees")
+	public String getAllEmployees(Model boxToView) {
+		
+		
+		//System.out.println(employeeRepository.findAll());
+		boxToView.addAttribute("employeeListfromControllerAndDB", employeeRepository.findAll() );
+		//boxToView.addAttribute("message", "hi from NORWAY");
+		//boxToView.addAttribute("smoker", true);
+		//boxToView.addAttribute("taxesIVA", 21.00);
+	
+		return "employees";
+	}
+	
+	@RequestMapping("/deleteEmployee")
+	public String removeEmployee (int id, Model model) {
+		
+		Optional<Employee> employeeFound = findOneEmployeeById(id);
+		
+		if (employeeFound != null) {
+			
+			employeeRepository.deleteById(id);
+			model.addAttribute("message", "deleted employee confirmation");
+			model.addAttribute( "employeeDeleted", employeeFound.get());
+		}
+		
+		else {
+			model.addAttribute("message", "deleted employee error");
+		}
+		
+		return "deletedEmployee";
+	}
+	
+	
+	public Optional<Employee> findOneEmployeeById (int id) {
+		
+		Optional<Employee> employeeFound = employeeRepository.findById(id);
+		
+		return employeeFound;
+	}
+
+}
