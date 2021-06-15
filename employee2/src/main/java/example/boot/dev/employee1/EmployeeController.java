@@ -1,5 +1,7 @@
 package example.boot.dev.employee1;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +24,15 @@ public class EmployeeController {
 	}
 	
 	@RequestMapping("*")
-	public String notFound () {
+	public String notFound (Model model) {
+		
+		
+		String pattern = "yyyy-MM-dd HH:mm:ssZ";
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+
+		
+	
+		model.addAttribute("serverTime", simpleDateFormat.format(new Date()));
 		
 		return "notFound";
 	}
@@ -57,7 +67,7 @@ public class EmployeeController {
 			model.addAttribute("message", "deleted employee error");
 		}
 		
-		return "deletedEmployee";
+		return "deletedemployee";
 	}
 	
 	
