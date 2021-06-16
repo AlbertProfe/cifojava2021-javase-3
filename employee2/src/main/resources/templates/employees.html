@@ -12,9 +12,7 @@
 		<h3>Table of employee</h3>
 
 		<table class="w3-table-all">
-
 			<tr class="w3-black w3-hover-teal">
-
 				<td>id</td>
 				<td>name</td>
 				<td>surname</td>
@@ -25,9 +23,7 @@
 				<td>delete</td>
 				<td>detail</td>
 			</tr>
-
 			<tr th:each="employee:${employeeListfromControllerAndDB}">
-
 
 				<td th:text="${employee.id}"></td>
 				<td th:text="${employee.name}"></td>
@@ -38,7 +34,8 @@
 				<td th:text="${employee.password}"></td>
 
 				<td><a th:href="@{deleteEmployee(id=${employee.id})}"
-					class="w3-button w3-red">Delete</a></td>
+					class="w3-button w3-red" >Delete</a></td>
+					
 				<td><a th:href="@{detailEmployee(title=${employee.id})}"
 					class="w3-button w3-teal">Detail</a></td>
 
