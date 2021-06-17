@@ -17,7 +17,12 @@ public class HomeController {
 		return "home";
 	}
 	
-	@RequestMapping("*")
+	@RequestMapping("/topics")
+	public String todoTopics () {
+		return "topics";
+	}
+	
+	@RequestMapping({"*", "employee/*"})
 	public String notFound (Model model) {
 		
 		

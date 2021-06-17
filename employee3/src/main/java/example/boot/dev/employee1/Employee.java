@@ -20,6 +20,8 @@ public class Employee {
 	public double monthSalary;
 	public String password;
 	
+	//private List<Expense> expenses;
+	
 
 	public Employee() {
 		super();}
