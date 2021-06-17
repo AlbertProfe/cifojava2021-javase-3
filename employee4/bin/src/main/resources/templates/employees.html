@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<body>
+
+	<div class="w3-panel w3-padding-32">
+		<h1>Spring Boot with Employee Iterable List from BD H2</h1>
+		<h3>Table of employee</h3>
+
+		<table class="w3-table-all">
+
+			<tr class="w3-black w3-hover-teal">
+
+				<td > id</td>
+				<td > name</td>
+				<td > surname </td>
+				<td > age</td>
+				<td> email</td>
+				<td > salary</td>
+				<td> password</td>
+			</tr>
+
+			<tr th:each="employee:${employeeListfromControllerAndDB}">
+
+
+				<td th:text="${employee.id}"></td>
+				<td th:text="${employee.name}"></td>
+				<td th:text="${employee.surname}"></td>
+				<td th:text="${employee.age}"></td>
+				<td th:text="${employee.email}"></td>
+				<td th:text="${employee.monthSalary}"></td>
+				<td th:text="${employee.password}"></td>
+
+
+
+
+			</tr>
+		</table>
+
+
+	</div>
+</html>

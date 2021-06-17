@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<body>
+
+	<div class="w3-panel w3-padding-32">
+		
+
+		<table class="w3-table-all">
+			<tr class="w3-black w3-hover-teal">
+				<td>id</td>
+				<td>name</td>
+				<td>value</td>
+				
+			</tr>
+			<tr th:each="e:${expensesfromController}">
+
+				<td th:text="${e.id}"></td>
+				<td th:text="${e.name}"></td>
+				<td th:text="${e.value}"></td>
+				
+
+				
+
+			</tr>
+		</table>
+
+
+	</div>
+</html>
