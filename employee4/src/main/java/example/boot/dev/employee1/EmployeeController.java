@@ -106,6 +106,21 @@ public class EmployeeController {
 
 	}
 	
+	@RequestMapping("/detailEmployee")
+	public String detailEmpoyee(int id, Model model) {
+
+		Optional<Employee> employeeFound = findOneEmployeeById(id);
+
+		if (employeeFound.isPresent()) {
+
+			model.addAttribute("employeefromController", employeeFound.get());
+			return "detailemployee";
+		}
+
+		else
+			return "notfound.html";
+	}
+	
 	@RequestMapping("/deleteAllEmployees")
 	public String deleteAllEmployees () {
 
