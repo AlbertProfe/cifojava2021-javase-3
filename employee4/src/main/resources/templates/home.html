@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
 <title>Welcome to my Spring Boot Project</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link th:href="@{/css/w3.css}" rel="stylesheet" />
+<link rel="stylesheet" th:href="@{/css/w3style/w3.css}" />
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <style>
 
 /* Create two equal columns that floats next to each other */
@@ -120,8 +123,8 @@ body {
 		<a class="active" th:href="@{/home/}">Spring Boot Project</a> <a
 			th:href="@{/employee/allEmployees}">All employees</a> <a
 			th:href="@{/employee/newEmployee}">Add new employee</a> <a
-			th:href="@{/fillin}">Fill in H2 DB</a><a
-			th:href="@{/topics}">To do Topics</a>
+			th:href="@{/fillin}">Fill in H2 DB</a><a th:href="@{/topics}">To
+			do Topics</a>
 
 		<div class="login-container">
 			<form action="/action_page.php">
@@ -159,7 +162,8 @@ body {
 				<div class="w3-card w3-dark-grey w3-right" style="width: 40%">
 
 					<h3>Friend Request</h3>
-					<img src="/images/home/img_avatar.jpg" alt="Avatar" style="width: 40%">
+					<img src="/images/home/img_avatar.jpg" alt="Avatar"
+						style="width: 40%">
 					<h5>John Doe</h5>
 
 					<div class="w3-section">
@@ -173,7 +177,8 @@ body {
 				<div class="w3-card w3-dark-grey w3-left " style="width: 40%">
 
 					<h3>Friend Request</h3>
-					<img src="/images/home/img_avatar2.jpg" alt="Avatar2" style="width: 40%">
+					<img src="/images/home/img_avatar2.jpg" alt="Avatar2"
+						style="width: 40%">
 					<h5>Jane Doe</h5>
 
 					<div class="w3-section">
