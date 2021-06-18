@@ -1,7 +1,6 @@
 package example.boot.dev.employee1;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
+
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+
 
 @Controller
 @RequestMapping("/employee")
@@ -22,11 +21,7 @@ public class EmployeeController {
 	@RequestMapping("/allEmployees")
 	public String getAllEmployees(Model boxToView) {
 
-		// System.out.println(employeeRepository.findAll());
 		boxToView.addAttribute("employeeListfromControllerAndDB", employeeRepository.findAll());
-		// boxToView.addAttribute("message", "hi from NORWAY");
-		// boxToView.addAttribute("smoker", true);
-		// boxToView.addAttribute("taxesIVA", 21.00);
 
 		return "employees";
 	}
@@ -47,7 +42,7 @@ public class EmployeeController {
 		}
 
 		else {
-			model.addAttribute("message", "deleted employee error, maybe there is no id .... or network connection ..");
+			model.addAttribute("message", "deleted employee error, maybe there is no id .... or network connection .. or is already deleted few miliseconds ago .. or ...");
 		}
 
 		// System.out.println("finishing removeEmployee" + id);
@@ -112,7 +107,7 @@ public class EmployeeController {
 	}
 	
 	@RequestMapping("/deleteAllEmployees")
-	public String deleteaAllEmployees () {
+	public String deleteAllEmployees () {
 
 		
 		 employeeRepository.deleteAll();

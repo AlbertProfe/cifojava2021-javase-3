@@ -10,9 +10,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>example.boot.dev</groupId>
-	<artifactId>employee1</artifactId>
+	<artifactId>employee4</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>employee1</name>
+	<name>employee4</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>16</java.version>
@@ -71,9 +71,6 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
-					<configuration>
-						<addResources>true</addResources>
-					</configuration>
 				</configuration>
 			</plugin>
 		</plugins>
