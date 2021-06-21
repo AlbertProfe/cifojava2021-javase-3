@@ -19,21 +19,25 @@ public class HomeController {
 
 	@Autowired
 	private EmployeeRepository employeeRepository;
-
+	
+	//------------------------------home ---------------------------
 	@RequestMapping({ "/home", "/" })
 	public String home() {
 		return "home";
 	}
 
+	
+	// -------------------------- to do example js ---------------------------------------
 	@RequestMapping("/topics")
 	public String todoTopics() {
 		return "topics";
 	}
 
+	//-------------------- fill in our DB ---------------------------------------
 	@RequestMapping({ "/fillin" })
 	public String finInDB() {
 
-		return "fillinemployee";
+		return "fillinemployee.html";
 	}
 
 	@RequestMapping({ "/fillinemployee" })
@@ -54,7 +58,7 @@ public class HomeController {
 		Faker faker = new Faker();
 		Random rand = new Random();
 		int max = 1525;
-		int count = 1;
+		int count = 0;
 
 		while (count < qtyToCreate) {
 
@@ -69,9 +73,9 @@ public class HomeController {
 			 */
 
 			employeeRepository.save(new Employee(faker.name().firstName(), faker.name().lastName(),
-					faker.number().numberBetween(18, 80), faker.name().firstName() + "@java.com",
+					faker.number().numberBetween(16, 65), faker.name().firstName() + "@java.com",
 					faker.number().randomDouble(2, 5, 2000),
-					String.valueOf((intRandom + 5) * count * 6) + stringRandom1 + stringRandom2 + stringRandom3));
+					String.valueOf((intRandom + 5) * (count+1)* 6) + stringRandom1 + stringRandom2 + stringRandom3));
 
 			count++;
 		}
@@ -79,6 +83,24 @@ public class HomeController {
 		return "redirect:/employee/allEmployees";
 	}
 
+	//-------------------------- error path website ----------------------------
+	@RequestMapping({ "*", "*/*", "*/*/*" })
+	public String notFound(Model model) {
+
+		String pattern = "yyyy-MM-dd HH:mm:ssZ";
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+		model.addAttribute("serverTime", simpleDateFormat.format(new Date()));
+		model.addAttribute("kingsley_variable", 15445);
+		model.addAttribute("borja_test", "lo conseguire, any doubt?");
+		model.addAttribute("smoker", true);
+
+		return "notFound";
+	}
+	
+	
+	//-------------------------------------------------------------------------
+	//------------------ service to homeController -----------------------------
+	//---------------------------------------------------------------------------
 	public static int createIntRandom(int top) {
 
 		Random rand = new Random();
@@ -89,14 +111,6 @@ public class HomeController {
 
 	}
 
-	@RequestMapping({ "*", "*/*" })
-	public String notFound(Model model) {
-
-		String pattern = "yyyy-MM-dd HH:mm:ssZ";
-		SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
-		model.addAttribute("serverTime", simpleDateFormat.format(new Date()));
-
-		return "notFound";
-	}
+	
 
 }

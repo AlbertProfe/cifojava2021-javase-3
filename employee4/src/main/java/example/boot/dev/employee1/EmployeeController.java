@@ -26,6 +26,7 @@ public class EmployeeController {
 		return "employees";
 	}
 
+	//-----------------------delete----------------------------------
 	@RequestMapping("/deleteEmployee")
 	public String removeEmployee(int id, Model model) {
 
@@ -49,6 +50,18 @@ public class EmployeeController {
 		return "deletedemployee.html";
 	}
 
+	@RequestMapping("/deleteAllEmployees")
+	public String deleteAllEmployees () {
+
+		
+		 employeeRepository.deleteAll();
+		
+
+		return "redirect:/employee/allEmployees";
+
+	}
+	
+	//-----------------------add----------------------------------
 	@RequestMapping("/newEmployee")
 	public String newEmpoyee() {
 
@@ -63,6 +76,7 @@ public class EmployeeController {
 		return "redirect:/employee/allEmployees";
 	}
 
+	//-----------------------update----------------------------------
 	@RequestMapping("/updateEmployee")
 	public String updateEmpoyee(int id, Model model) {
 
@@ -106,6 +120,7 @@ public class EmployeeController {
 
 	}
 	
+	//-----------------------detail----------------------------------
 	@RequestMapping("/detailEmployee")
 	public String detailEmpoyee(int id, Model model) {
 
@@ -121,17 +136,6 @@ public class EmployeeController {
 			return "notfound.html";
 	}
 	
-	@RequestMapping("/deleteAllEmployees")
-	public String deleteAllEmployees () {
-
-		
-		 employeeRepository.deleteAll();
-		
-
-		return "redirect:/employee/allEmployees";
-
-	}
-
 //--------------------------------------------------------------------------------
 //------------------------- service to controller --------------------------------
 //--------------------------------------------------------------------------------

@@ -6,21 +6,22 @@
 <head>
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 <meta charset="ISO-8859-1">
 <title>Fill in</title>
 </head>
 <body>
 	<div class="w3-container w3-card ">
 		<h2>Fill in and delete db</h2>
-		<p>options ...</p>
+		<p>choose your options ...</p>
 	</div>
 	<div class="w3-container w3-card-4 w3-display-middle w3-center"
 		style="width: 50%;">
 
-
 		<p>How many employees do you want to create?</p>
 
+		<a th:href="@{/fillinemployee(qtyToCreate=10)}"
+			class="w3-button w3-teal">Create 10 employees</a>
+		<p></p>
 		<a th:href="@{/fillinemployee(qtyToCreate=100)}"
 			class="w3-button w3-teal">Create 100 employees</a>
 		<p></p>
@@ -33,16 +34,12 @@
 		<a th:href="@{/fillinemployee(qtyToCreate=10000)}"
 			class="w3-button w3-teal">Create 10000 employees</a>
 
-
-
 		<p>Delete all employees</p>
 
 		<a th:href="@{/employee/deleteAllEmployees}" class="w3-button w3-red">Delete
 			all employees</a>
 		<p></p>
 		<p></p>
-
-
 
 	</div>
 
