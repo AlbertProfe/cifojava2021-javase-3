@@ -30,7 +30,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 		@RequestMapping("/addExpense")
 		public String inserEmployee( @Validated Expense expense) {
 			
-			System.out.println(expense);
+			//System.out.println(expense);
 			expenseRepository.save(expense);
 
 			return "redirect:/expense/allExpenses";

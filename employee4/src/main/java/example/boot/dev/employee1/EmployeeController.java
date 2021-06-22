@@ -38,12 +38,12 @@ public class EmployeeController {
 		if (employeeFound.isPresent()) {
 
 			employeeRepository.deleteById(id);
-			model.addAttribute("message", "deleted employee confirmation");
+			model.addAttribute("message", "done");
 			model.addAttribute("employeeDeleted", employeeFound.get());
 		}
 
 		else {
-			model.addAttribute("message", "deleted employee error, maybe there is no id .... or network connection .. or is already deleted few miliseconds ago .. or ...");
+			model.addAttribute("message", "error");
 		}
 
 		// System.out.println("finishing removeEmployee" + id);
