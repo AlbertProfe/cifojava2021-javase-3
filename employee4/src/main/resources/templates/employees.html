@@ -1,19 +1,25 @@
 <!DOCTYPE html>
-
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
 <head>
+<title>Welcome to my Spring Boot Project</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link th:href="@{/css/w3style/w3.css}" rel="stylesheet" />
+<link rel="stylesheet" th:href="@{/css/w3style/w3.css}" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+<head>
+    <title>Welcome to our site</title>
 </head>
+
 <body>
 
-	<div class="w3-panel w3-padding-32">
-		<h1>Spring Boot with Employee Iterable List from BD H2</h1>
-		<h3>Table of employee</h3>
+<div layout:fragment="content">
 
-		<table class="w3-table-all">
+		<table class="w3-table-all w3-card-4 w3-padding-64 w3-margin"
+			style="width: 80%">
 			<tr class="w3-black w3-hover-teal">
 				<td>id</td>
 				<td>name</td>
@@ -23,7 +29,6 @@
 				<td>salary</td>
 				<td>password</td>
 				<td>actions</td>
-
 			</tr>
 			<tr th:each="employee:${employeeListfromControllerAndDB}">
 
@@ -46,7 +51,7 @@
 			</tr>
 		</table>
 
+</div>
 
-	</div>
 </body>
 </html>

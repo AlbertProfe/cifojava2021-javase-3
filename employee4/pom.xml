@@ -18,6 +18,11 @@
 		<java.version>16</java.version>
 	</properties>
 	<dependencies>
+	<dependency>
+            <groupId>nz.net.ultraq.thymeleaf</groupId>
+            <artifactId>thymeleaf-layout-dialect</artifactId>
+         
+        </dependency>
 		<dependency>
 			<groupId>com.github.javafaker</groupId>
 			<artifactId>javafaker</artifactId>

@@ -26,13 +26,6 @@ public class HomeController {
 		return "home";
 	}
 
-	
-	// -------------------------- to do example js ---------------------------------------
-	@RequestMapping("/topics")
-	public String todoTopics() {
-		return "topics";
-	}
-
 	//-------------------- fill in our DB ---------------------------------------
 	@RequestMapping({ "/fillin" })
 	public String finInDB() {
