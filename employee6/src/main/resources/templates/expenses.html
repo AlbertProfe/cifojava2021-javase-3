@@ -13,6 +13,7 @@
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <head>
 <title>Welcome to our site</title>
+</head>
 <style>
 * {
 	box-sizing: border-box;
@@ -29,11 +30,35 @@
 	margin-bottom: 12px;
 }
 </style>
-</head>
-
 <body>
 
 	<div layout:fragment="content">
+
+
+
+		<div th:if="${expenseAdded}"
+			class="w3-panel w3-teal w3-center  w3-display-container">
+			<span onclick="this.parentElement.style.display='none'"
+				class="w3-button w3-teal w3-large w3-display-topright">x</span>
+			<h3>Expense added!</h3>
+			<p th:text="${expenseAdded}">></p>
+		</div>
+
+		<div th:if="${expenseUpdated}"
+			class="w3-panel w3-blue w3-center  w3-display-container">
+			<span onclick="this.parentElement.style.display='none'"
+				class="w3-button w3-blue w3-large w3-display-topright">x</span>
+			<h3>Expense updated!</h3>
+			<p th:text="${expenseUpdated}">></p>
+		</div>
+
+		<div th:if="${expenseDeleted}"
+			class="w3-panel w3-red w3-center w3-display-container">
+			<span onclick="this.parentElement.style.display='none'"
+				class="w3-button w3-red w3-large w3-display-topright">x</span>
+			<h3>Expense deleted!</h3>
+			<p th:text="${expenseDeleted}">></p>
+		</div>
 
 		<div class="w3-container w3-margin">
 			<p>expenses table</p>
@@ -50,12 +75,18 @@
 				<td>name</td>
 				<td>date</td>
 				<td>value</td>
+				<td>operations</td>
 			</tr>
 			<tr th:each="expense:${expensesfromController}">
 				<td th:text="${expense.id}"></td>
 				<td th:text="${expense.name}"></td>
 				<td th:text="${#dates.format(expense.date,'dd-MMM-yyyy')}"></td>
 				<td th:text="${expense.value}"></td>
+
+				<td><a th:href="@{deleteExpense(id=${expense.id})}"
+					class="w3-button w3-small w3-red">Delete</a> <a
+					th:href="@{updateExpense(id=${expense.id})}"
+					class="w3-button w3-small w3-blue">Update</a></td>
 			</tr>
 		</table>
 		<script>
