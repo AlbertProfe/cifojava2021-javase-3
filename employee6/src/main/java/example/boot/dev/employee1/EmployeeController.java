@@ -21,7 +21,8 @@ public class EmployeeController {
 	@RequestMapping("/allEmployees")
 	public String getAllEmployees(Model boxToView) {
 
-		boxToView.addAttribute("employeeListfromControllerAndDB", employeeRepository.findAll());
+		boxToView.addAttribute("employeeListfromControllerAndDB", 
+				employeeRepository.findAll());
 
 		return "employees";
 	}
