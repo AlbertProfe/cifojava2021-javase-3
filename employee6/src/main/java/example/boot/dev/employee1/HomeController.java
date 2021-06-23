@@ -25,10 +25,11 @@ public class HomeController {
 	public String home() {
 		return "home";
 	}
-	
-	
-	  @RequestMapping("/login") public String login() { return "login"; }
-	 
+
+	@RequestMapping("/login")
+	public String login() {
+		return "login";
+	}
 
 	// -------------------- fill in our DB ---------------------------------------
 	@RequestMapping({ "/fillin" })
@@ -53,7 +54,7 @@ public class HomeController {
 		 */
 
 		Faker faker = new Faker();
-		//Random rand = new Random();
+		// Random rand = new Random();
 		int max = 1525;
 		int count = 0;
 		int intRandom;
@@ -64,7 +65,7 @@ public class HomeController {
 			stringRandom2 = alphabetChars.charAt(createIntRandom(alphabetChars.length()));
 			stringRandom3 = alphabetChars.charAt(createIntRandom(alphabetChars.length()));
 			intRandom = createIntRandom(max);
-			intRandom2 = createIntRandom(max*10);
+			intRandom2 = createIntRandom(max * 10);
 
 			/*
 			 * boolean randomPublished; if ((intRandom % 2) == 0) { randomPublished = true;
@@ -76,8 +77,7 @@ public class HomeController {
 					faker.number().randomDouble(2, 5, 2000),
 					String.valueOf((intRandom + 5) * (count + 1) * 6) + stringRandom1 + stringRandom2 + stringRandom3));
 
-			expenseRepository.save(new Expense(faker.beer().name(),
-					faker.date().birthday(0, 3), 
+			expenseRepository.save(new Expense(faker.beer().name(), faker.date().birthday(0, 3),
 					faker.number().randomDouble(2, 50, 2000)));
 
 			count++;
@@ -109,7 +109,7 @@ public class HomeController {
 
 		// Generate random integers in range 0 to top, if top=10 random 0 to 9
 		int intRandom = rand.nextInt(top);
-		//System.out.println(intRandom);
+		// System.out.println(intRandom);
 		return intRandom;
 
 	}
