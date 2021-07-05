@@ -1,8 +1,8 @@
 # cifojava2021-javase-3
 Java SE exercises: Objects, POO, to practise with objects and classes, that is: uses, composition, inherence creating UML with INTERFACES
-
+Spring Boot CRUD JPA @Entity employee exercise:
 - Spring Boot with @Controller, View and Thymeleaf and Applications.properties
-- Classes: @Entity Employee and CrudRepository Interface
+- Classes: JPA @Entity Employee and CrudRepository Interface
 - Database: H2 (local or in Memory) and ddl.auto
 
 
@@ -16,6 +16,8 @@ Java SE exercises: Objects, POO, to practise with objects and classes, that is: 
 - employee6: Login (classes: MvcConfig and WebSecurityConfig)
 
 ## userUniversity (java-SE)
+Java SE exercises: Objects, POO, to practise with objects and classes, that is: uses, composition, inherence creating UML with INTERFACES
+
 
 - userUniversity
 - userUniversity0.1
